@@ -1,0 +1,68 @@
+<?page title="Categoria" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="win" title="Categoria" border="normal"
+		apply="br.com.marcus.nma.controller.CCategoria"
+		position="center,center">
+		<caption>
+			<button id="btnNovaCategoria" label="Nova Categoria"
+				onClick="dlgCategoria.setVisible(true)" />
+		</caption>
+
+
+		<listbox id="listCategoria"
+			emptyMessage="Nao foram encontradas Categorias.">
+			<listhead width="100%">
+				<listheader label="Código" sort="auto" width="10%" />
+				<listheader label="Categoria" sort="auto" width="20%" />
+				<listheader label="Descrição" sort="auto" width="50%" />
+				<listheader label="Opções" sort="auto" width="20%" />
+			</listhead>
+			<template name="model">
+				<listitem>
+					<listcell label="${each.codigo}" />
+					<listcell label="${each.categoria}" />
+					<listcell label="${each.descricao}" />
+					<listcell>
+						<button label="Excluir"
+							forward="onClick=listCategoria.onDeleteItem(${each})" />
+					 	<button label="Editar" onClick="dlgCategoria.setVisible(true)"
+							forward="onClick=listCategoria.onEditar(${each})" />
+					</listcell>
+				</listitem>
+			</template>
+		</listbox>
+
+		<window id="dlgCategoria" title="Cadastro de Categorias"
+			width="30%" mode="modal" visible="false">
+
+			<grid>
+				<columns>
+					<column />
+					<column />
+				</columns>
+				<rows>
+					<row>
+						<label>Categoria: *</label>
+						<textbox id="tbCategoria" maxlength="5" />
+					</row>
+					<row>
+						<label>Descrição: *</label>
+						<textbox width="100%" id="tbDescricao"
+							rows="5">
+						</textbox>
+					</row>
+					<row>
+						<cell>
+							<button id="btnSalvar" label="Salvar"
+								onClick="win$composer.Salvar()" />
+						</cell>
+						<cell>
+							<button id="btnFechar" label="Fechar"
+								onClick="dlgCategoria.setVisible(false)"/>
+						</cell>
+					</row>
+				</rows>
+			</grid>
+		</window>
+	</window>
+</zk>

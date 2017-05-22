@@ -1,0 +1,12 @@
+<zk>
+<grid>
+		<columns>
+			<column label=""/>
+		</columns>
+		<rows>
+			<row>
+			<a href="/index-categoria.zul">Cadastro de Categorias</a>	
+			</row>
+		</rows>
+	</grid>
+</zk>
