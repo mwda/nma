@@ -14,7 +14,8 @@
 			<listhead width="100%">
 				<listheader label="Código" sort="auto" width="10%" />
 				<listheader label="Categoria" sort="auto" width="20%" />
-				<listheader label="Descrição" sort="auto" width="50%" />
+				<listheader label="Descrição" sort="auto" width="40%" />
+				<listheader label="Sequencial" sort="auto" width="10%" />
 				<listheader label="Opções" sort="auto" width="20%" />
 			</listhead>
 			<template name="model">
@@ -22,6 +23,7 @@
 					<listcell label="${each.codigo}" />
 					<listcell label="${each.categoria}" />
 					<listcell label="${each.descricao}" />
+					<listcell label="${each.sequencial}" />
 					<listcell>
 						<button label="Excluir"
 							forward="onClick=listCategoria.onDeleteItem(${each})" />

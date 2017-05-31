@@ -33,7 +33,14 @@
 
 		<!-- Mapeamento das entidades -->
 		<mapping class="br.com.marcus.nma.domain.Categoria" />
+<!-- 		<mapping class="br.com.marcus.nma.domain.EntradaPatrimoniado" />
+		<mapping class="br.com.marcus.nma.domain.ItemEstoquePatrimoniado" />
+		<mapping class="br.com.marcus.nma.domain.SaidaPatrimoniado" />
+		<mapping class="br.com.marcus.nma.domain.UnidadeOrganizacional" />
+		<mapping class="br.com.marcus.nma.domain.UnMedida" />
+		<mapping class="br.com.marcus.nma.domain.Usuario" /> -->
 		
-
+		
+		
 	</session-factory>
 </hibernate-configuration>
